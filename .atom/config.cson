@@ -1,0 +1,31 @@
+"*":
+  editor:
+    invisibles: {}
+  core:
+    themes: [
+      "atom-light-ui"
+      "monokai"
+    ]
+    disabledPackages: [
+      "emmet"
+      "emacs-center-screen"
+      "transient-emacs"
+      "incremental-search"
+      "emacs-mode"
+    ]
+  "exception-reporting":
+    userId: "9d037fea-1dbe-ded5-05b4-e8a65ce5c867"
+  welcome:
+    showOnStartup: false
+  "autoclose-html": {}
+  "autocomplete-plus": {}
+  "emacs-mode":
+    hideTabs: false
+    hideSidebar: false
+    useEmacsCursor: true
+    useFuzzyFileFinder: false
+    useFuzzyBufferFinder: false
+  linter: {}
+  minimap:
+    plugins:
+      "find-and-replace": true

@@ -1,0 +1,41 @@
+{
+  "name": "linter-perl",
+  "linter-package": true,
+  "activationEvents": [],
+  "main": "./lib/init",
+  "version": "0.4.1",
+  "description": "Lint perl on the fly, using perl (B::Lint)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-shin/linter-perl"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "linter-perl package\n===================\n\nThis linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to perl.\nIt will be used with files that have the \"Perl\" syntax.\n\n## Installation\n\n* Install [Perl 5](http://www.perl.org/).\n* `apm install linter` (if you didn't install Linter).\n* `apm install linter-perl`\n\n## Settings\nYou can configure linter-perl by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):\n\n```\n\"linter-perl\":\n  \"perlExecutablePath\": null # perl path. run 'which perl' to find the path\n  \"executeCommandViaShell\": false # If it is true, the command is executed via `$SHELL -l`\n  \"autoDetectCarton\": true # If it is true, and \"cpanfile.snapshot\" and \"local/\" exist, carton command is used.\n  \"additionalPerlOptions\": \"\" # This is passed to the perl interpreter directly.\n  \"incPathsFromProjectPath\": [\".\", \"lib\"] # Relative include paths from the project directory.\n  \"lintOptions\": \"-no-bare-subs\" # B::Lint options. \"-MO=Lint,HERE\"\n```\n\n### plenv Support\n\nThere are three ways to use this package with [plenv](https://github.com/tokuhirom/plenv):\n\n- Open a project by `atom .` in your shell.\n- Otherwise (e.g. drag & drop),\n  - set `\"/absolute/path/to/.plenv/shims\"` to `perlExecutablePath` (this way is not portable)\n  - set `true` to `executeCommnadViaShell` (`perlExecutablePath` is ignored)\n\n[Perlbrew](http://perlbrew.pl/) is not tested, but those methods could be used.\n\n## Contributing\nIf you would like to contribute enhancements or fixes, please do the following:\n\n1. Fork the plugin repository.\n1. Hack on a separate topic branch created from the latest `master`.\n1. Commit and push the topic branch.\n1. Make a pull request.\n1. welcome to the club\n\nPlease note that modifications should follow these coding guidelines:\n\n- Indent is 2 spaces.\n- Code should pass coffeelint linter.\n- Vertical whitespace helps readability, don’t be afraid to use it.\n\nThank you for helping out!\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/s-shin/linter-perl/issues"
+  },
+  "homepage": "https://github.com/s-shin/linter-perl",
+  "_id": "linter-perl@0.4.1",
+  "_shasum": "e8be3eb9be0a82fd495937a1098d657deeed23e8",
+  "_resolved": "file:../d-11523-2968-af57ku/package.tgz",
+  "_from": "../d-11523-2968-af57ku/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/init.coffee",
+        "lib/linter-perl.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

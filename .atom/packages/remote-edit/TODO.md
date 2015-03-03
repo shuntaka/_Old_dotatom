@@ -1,0 +1,8 @@
+ - [x] fix notifications panel
+ - [x] fix dialog.coffee
+ - [ ] submit new bug ssh2 because of EOF when using newest version
+ - [ ] create hidden input dialog and use it in dialog.coffee and elsewhere
+ - [ ] switch to https://github.com/atom/notifications instead of atom-message-panel
+ - [x] check and fix serializing
+ - [x] clear input when a directory is selected
+ - [x] destroy all views, at least call destroy on them

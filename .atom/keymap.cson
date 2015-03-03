@@ -1,0 +1,82 @@
+# Your keymap;
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':
+#   'enter': 'editor:newline'
+#
+# '.workspace':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+
+'atom-text-editor':
+  'cmd-x': 'command-palette:toggle' # emacs M-x
+  'ctrl-x h': 'core:select-all'
+  'ctrl-t': 'unset!'
+  'cmd-a': 'unset!'
+'atom-text-editor':
+  'cmd-x': 'command-palette:toggle' # emacs M-x
+  'ctrl-x h': 'core:select-all'
+
+  'cmd-f': 'editor:move-to-end-of-word' #emacs cmd-f
+  'cmd-b': 'editor:move-to-beginning-of-word' #emacs cmd-f
+  'ctrl-space': 'emacs:set-mark'
+
+'atom-text-editor:not([mini])':
+  'ctrl-m': 'editor:newline'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-;': 'editor:toggle-line-comments'
+
+'body':
+  'ctrl-g': 'core:cancel'
+  'ctrl-x f': 'application:open';
+  'ctrl-x [': 'core:move-to-top' #emacs C-x [
+  'ctrl-x ]': 'core:move-to-bottom' #emacs C-x ]
+  'cmd-v': 'core:page-up' #emacs cmd-v
+  'ctrl-v': 'core:page-down'
+
+  'ctrl-x 2': 'pane:split-down'
+  'ctrl-x 3': 'pane:split-right'
+  'ctrl-t': 'window:focus-next-pane'
+  'ctrl-x 0': 'pane:close'
+
+  'ctrl-/'  : 'core:undo'
+  'ctrl-cmd-/': 'core:redo'
+
+  'ctrl-x ctrl-s': 'core:save'
+
+  'cmd-a': 'editor:move-to-beginning-of-previous-paragraph'
+  'cmd-e': 'editor:move-to-beginning-of-next-paragraph'
+  'cmd-w': 'unset!'
+  # 'cmd-w': 'core:copy'
+  # 'ctrl-w': 'core:cut'
+
+'.editor':
+  'ctrl-cmd-k': 'line-jumper:move-up'
+  'ctrl-cmd-j': 'line-jumper:move-down'
+
+'.platform-darwin':
+  'ctrl-;': 'fuzzy-finder:toggle-file-finder'
+  'cmd-g cmd-g': 'go-to-line:toggle'
+
+'.platform-darwin .find-and-replace':
+  'ctrl-s': 'core:confirm'
+  'ctrl-r': 'find-and-replace:show-previous'
+  'ctrl-g': 'core:cancel'
+
+'.platform-darwin atom-text-editor':
+  'cmd-e': 'unset!'
+
+'.platform-darwin, .platform-win32, .platform-linux':
+  'ctrl-g': 'unset!'
+  'ctrl-g': 'core:cancel'
+  'cmd-g cmd-g': 'go-to-line:toggle'

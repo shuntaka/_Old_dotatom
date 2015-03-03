@@ -1,0 +1,101 @@
+{
+  "name": "transient-emacs",
+  "main": "./lib/transient-emacs",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Emacs mode using transient mark (for OSX)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yasuyuky/transient-emacs"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.150.0"
+  },
+  "dependencies": {
+    "underscore-plus": "1.x",
+    "space-pen": "^3"
+  },
+  "readme": "Transient Emacs for Atom Editor\n===============================\n\nEmacs (transient mark mode) for Atom Editor.\n\n**(Currently only works with OSX)**\n\n[![Build Status](https://travis-ci.org/yasuyuky/transient-emacs.svg)](https://travis-ci.org/yasuyuky/transient-emacs)\n\nThis package emulate Emacs'\n[transient-mark-mode](http://www.emacswiki.org/emacs/TransientMarkMode).\n\nFeatures\n========\n\n- [x] emacs like keybindings\n- [x] kill-ring with multiple cursors\n- [x] sync kill-ring with clipboard\n- [ ] yank text selected from kill-ring history\n- [ ] emacs like incremental search\n\nKeybindings\n===========\n\nSee keymaps/transient-emacs.cson for detailed keybindings\n\nCurently this package uses [Incremental Search Package](https://atom.io/packages/incremental-search)\nfor search key-bindings.\nIt's good enough to me ;)\n\n```coffee-script\n# Keybindings require three things to be fully defined: A selector that is\n# matched against the focused element, the keystroke and the command to\n# execute.\n#\n# Below is a basic keybinding which registers on all platforms by applying to\n# the root workspace element.\n\n# For more detailed documentation see\n# https://atom.io/docs/latest/advanced/keymaps\n\n'body':\n  'ctrl-x b':'fuzzy-finder:toggle-buffer-finder'\n  'ctrl-x ctrl-b':'fuzzy-finder:toggle-file-finder'\n  'ctrl-x ctrl-f':'application:open'\n  'ctrl-x ctrl-c':'application:quit'\n\n  'ctrl-x 2':'pane:split-right'\n  'ctrl-x 3':'pane:split-down'\n  'ctrl-x 0':'pane:close'\n  'ctrl-x o':'window:focus-next-pane'\n\n  'ctrl-g':'core:cancel'\n\n'atom-panel':\n  'ctrl-g':'tool-panel:unfocus'\n\n'atom-text-editor[mini]':\n  'ctrl-g':'core:cancel'\n  'ctrl-k':'editor:cut-to-end-of-line'\n  'ctrl-y':'core:paste'\n\n'atom-text-editor':\n  'ctrl-g':'emacs:cancel'\n  'ctrl-@':'emacs:set-mark'\n  'ctrl-y':'emacs:yank'\n  'ctrl-k':'emacs:kill'\n  'ctrl-w':'emacs:kill-region-or-backward-word'\n  'alt-w':'emacs:copy-region'\n  'escape w':'emacs:copy-region'\n\n  'ctrl-a':'editor:move-to-first-character-of-line'\n  'ctrl-e':'editor:move-to-end-of-line'\n  'ctrl-right':'editor:move-to-beginning-of-next-word'\n  'ctrl-left':'editor:move-to-beginning-of-word'\n  'ctrl-up':'editor:move-to-beginning-of-previous-paragraph'\n  'ctrl-down':'editor:move-to-beginning-of-next-paragraph'\n\n  'ctrl-shift-right':'editor:select-to-beginning-of-next-word'\n  'ctrl-shift-left':'editor:select-to-beginning-of-word'\n\n  'ctrl-v':'core:page-down'\n  'alt-v':'core:page-up'\n  'escape v':'core:page-up'\n  'alt-<':'core:move-to-top'\n  'escape <':'core:move-to-top'\n  'alt->':'core:move-to-bottom'\n  'escape >':'core:move-to-bottom'\n\n  'ctrl-s':'incremental-search:forward'\n  'ctrl-r':'incremental-search:backward'\n\n  'ctrl-x ctrl-s':'core:save'\n  'ctrl-x ctrl-w':'core:save-as'\n  'ctrl-x u':'core:undo'\n  'ctrl-x k':'core:close'\n\n  'alt-.':'symbols-view:toggle-file-symbols'\n\n  'alt-x':'command-palette:toggle'\n  'escape x':'command-palette:toggle'\n  'alt-/':'autocomplete:toggle'\n\n'atom-text-editor.transient-marked':\n  'ctrl-g':'emacs:set-mark'\n  'right':'core:select-right'\n  'ctrl-f':'core:select-right'\n  'left':'core:select-left'\n  'ctrl-b':'core:select-left'\n  'up':'core:select-up'\n  'ctrl-p':'core:select-up'\n  'down':'core:select-down'\n  'ctrl-n':'core:select-down'\n  'ctrl-a':'editor:select-to-first-character-of-line'\n  'ctrl-e':'editor:select-to-end-of-line'\n  'ctrl-right':'editor:select-to-beginning-of-next-word'\n  'ctrl-left':'editor:select-to-beginning-of-word'\n  'ctrl-up':'editor:select-to-beginning-of-previous-paragraph'\n  'ctrl-down':'editor:select-to-beginning-of-next-paragraph'\n  'ctrl-v':'core:select-page-down'\n  'alt-<':'core:select-to-top'\n  'escape <':'core:select-to-top'\n  'alt->':'core:select-to-bottom'\n  'escape >':'core:select-to-bottom'\n\n\n```\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/yasuyuky/transient-emacs/issues"
+  },
+  "homepage": "https://github.com/yasuyuky/transient-emacs",
+  "_id": "transient-emacs@0.6.0",
+  "_shasum": "484c23dd7a46703f8edd90fd593b82f4800dd54c",
+  "_resolved": "file:../d-11523-2968-q9ir32/package.tgz",
+  "_from": "../d-11523-2968-q9ir32/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "space-pen",
+        "version": "3.8.2",
+        "path": "node_modules/space-pen/lib/space-pen.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/kill-ring.coffee",
+        "lib/transient-emacs.coffee"
+      ],
+      ".json": [
+        "node_modules/space-pen/api.json",
+        "node_modules/space-pen/package.json",
+        "node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "package.json"
+      ],
+      ".js": [
+        "node_modules/space-pen/lib/space-pen.js",
+        "node_modules/space-pen/vendor/jquery.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "",
+          "spec"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "space-pen": "^3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/space-pen",
+          "node_modules/space-pen/lib",
+          "node_modules/space-pen/vendor"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      }
+    ]
+  }
+}
