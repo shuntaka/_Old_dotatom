@@ -16,7 +16,6 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
-
 'atom-text-editor':
   'cmd-x': 'command-palette:toggle' # emacs M-x
   'ctrl-x h': 'core:select-all'
@@ -37,6 +36,7 @@
   'cmd-;': 'editor:toggle-line-comments'
 
 'body':
+  'ctrl-d': 'unset!'
   'ctrl-g': 'core:cancel'
   'ctrl-x f': 'application:open';
   'ctrl-x [': 'core:move-to-top' #emacs C-x [

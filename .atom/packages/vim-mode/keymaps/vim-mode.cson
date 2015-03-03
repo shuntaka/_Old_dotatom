@@ -36,6 +36,8 @@
   'ctrl-n': 'vim-mode:move-down'
   'down': 'vim-mode:move-down'
 
+  'ctrl-d': 'core:delete'
+
 
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
