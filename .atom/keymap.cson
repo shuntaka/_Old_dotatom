@@ -72,6 +72,7 @@
   'ctrl-s': 'core:confirm'
   'ctrl-r': 'find-and-replace:show-previous'
   'ctrl-g': 'core:cancel'
+  'ctrl-d': 'core:delete'
 
 '.platform-darwin atom-text-editor':
   'cmd-e': 'unset!'
