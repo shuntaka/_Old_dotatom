@@ -12,6 +12,7 @@
       "transient-emacs"
       "incremental-search"
       "emacs-mode"
+      "atom-html-preview"
     ]
   "exception-reporting":
     userId: "9d037fea-1dbe-ded5-05b4-e8a65ce5c867"
@@ -29,3 +30,13 @@
   minimap:
     plugins:
       "find-and-replace": true
+      "git-diff": true
+  "recent-files":
+    updated: false
+  "spell-check":
+    grammars: [
+      "source.perl"
+    ]
+".perl.source":
+  editor:
+    tabLength: 4

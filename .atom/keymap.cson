@@ -66,6 +66,7 @@
 
 '.platform-darwin':
   'ctrl-;': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-d': 'core:delete'
   'cmd-g cmd-g': 'go-to-line:toggle'
 
 '.platform-darwin .find-and-replace':
