@@ -37,6 +37,7 @@
   'down': 'vim-mode:move-down'
 
   'ctrl-d': 'core:delete'
+  'ctrl-w': 'core:cut'
 
 
 

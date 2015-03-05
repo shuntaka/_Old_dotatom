@@ -1,0 +1,13 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'file-explorer'
+      'submenu': [
+        { 'label': 'Toggle Current Directory', 'command': 'file-explorer:toggle-current-directory' }
+        { 'label': 'Toggle Home Directory', 'command': 'file-explorer:toggle-home-directory' }
+      ]
+    ]
+  }
+]

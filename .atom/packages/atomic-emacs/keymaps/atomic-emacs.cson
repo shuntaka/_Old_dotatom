@@ -19,7 +19,7 @@
   'ctrl-k': 'editor:cut-to-end-of-line'
   'ctrl-g': 'core:cancel'
   'ctrl-y': 'core:paste'
-  'ctrl-w': 'core:cut'
+  # 'ctrl-w': 'core:cut'
   'ctrl-v': 'atomic-emacs:scroll-up'
   'ctrl-s': 'find-and-replace:show'
   'ctrl-r': 'find-and-replace:show'
