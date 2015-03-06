@@ -27,7 +27,7 @@
 
   'cmd-f': 'editor:move-to-end-of-word' #emacs cmd-f
   'cmd-b': 'editor:move-to-beginning-of-word' #emacs cmd-f
-  'ctrl-space': 'emacs:set-mark'
+  # 'ctrl-space': 'emacs:set-mark'
 
 'atom-text-editor:not([mini])':
   'ctrl-m': 'editor:newline'
@@ -71,6 +71,7 @@
 
 '.platform-darwin .find-and-replace':
   'ctrl-s': 'core:confirm'
+  'enter' : 'core:cancel'
   'ctrl-r': 'find-and-replace:show-previous'
   'ctrl-g': 'core:cancel'
   'ctrl-d': 'core:delete'

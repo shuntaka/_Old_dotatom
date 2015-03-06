@@ -169,7 +169,7 @@
 
 'atom-text-editor.vim-mode.command-mode':
   'i': 'vim-mode:activate-insert-mode'
-  'ctrl-space': 'atomic-emacs:set-mark'
+  # 'ctrl-space': 'atomic-emacs:set-mark'
   'V': 'vim-mode:activate-linewise-visual-mode'
   'ctrl-x space': 'vim-mode:activate-blockwise-visual-mode'
 
