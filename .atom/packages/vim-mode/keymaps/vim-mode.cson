@@ -19,6 +19,7 @@
 'atom-text-editor.vim-mode.insert-mode':
   'ctrl-x 3': 'pane:split-right'
   'ctrl-x 2': 'pane:split-down'
+  'ctrl-x 0': 'pane:close'
   'ctrl-x [': 'vim-mode:move-to-start-of-file'
   'ctrl-x ]': 'vim-mode:move-to-line'
   'ctrl-w': 'editor:delete-to-beginning-of-word'
@@ -56,7 +57,11 @@
   'ctrl-space': 'vim-mode:activate-characterwise-visual-mode'
   # 'ctrl-y': 'vim-mode:put-before'
   'ctrl-y': 'core:paste'
- 
+  
+'atom-text-editor.vim-mode.insert-mode .autocomplete-plus.autocomplete-suggestion-list':
+  'ctrl-p': 'autocomplete-plus:select-next'
+  'ctrl-n': 'autocomplete-plus:select-previous'
+
 
 ###########################################################################
 # Command Mode and Visual Mode
@@ -150,6 +155,7 @@
   # 'ctrl-w ctrl-v': 'pane:split-right'
   'ctrl-x 3': 'pane:split-right'
   'ctrl-x 2': 'pane:split-down'
+  'ctrl-x 0': 'pane:close'
   # 'ctrl-w s': 'pane:split-down'
   # 'ctrl-w ctrl-c': 'pane:close'
   'ctrl-x 0': 'pane:close'
