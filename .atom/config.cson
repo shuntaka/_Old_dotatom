@@ -3,6 +3,7 @@
     invisibles: {}
     tabLength: 4
     showIndentGuide: true
+    showInvisibles: true
   core:
     themes: [
       "atom-light-ui"
@@ -15,6 +16,7 @@
       "emacs-mode"
       "atom-html-preview"
       "incremental-search"
+      "atomic-emacs"
     ]
   "exception-reporting":
     userId: "9d037fea-1dbe-ded5-05b4-e8a65ce5c867"
@@ -37,6 +39,10 @@
   "recent-files":
     updated: false
   "spell-check": {}
+  "highlight-line":
+    enableSelectionBorder: true
+    enableUnderline: true
+    hideHighlightOnSelect: true
 ".perl.source":
   editor:
     tabLength: 4

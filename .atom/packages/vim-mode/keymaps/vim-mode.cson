@@ -6,11 +6,21 @@
 'atom-text-editor.vim-mode:not(.command-mode)':
   'escape': 'vim-mode:activate-command-mode'
   'ctrl-[': 'vim-mode:activate-command-mode'
+  'ctrl-g': 'vim-mode:activate-command-mode'
 
 '.platform-darwin atom-text-editor.vim-mode:not(.command-mode)':
   'ctrl-c': 'vim-mode:activate-command-mode'
+  'ctrl-g': 'vim-mode:activate-command-mode'
+
+###########################################################################
+# Insert Mode
+###########################################################################
 
 'atom-text-editor.vim-mode.insert-mode':
+  'ctrl-x 3': 'pane:split-right'
+  'ctrl-x 2': 'pane:split-down'
+  'ctrl-x [': 'vim-mode:move-to-start-of-file'
+  'ctrl-x ]': 'vim-mode:move-to-line'
   'ctrl-w': 'editor:delete-to-beginning-of-word'
   'ctrl-cmd-h': 'vim-mode:move-to-top-of-screen'
   'ctrl-cmd-l': 'vim-mode:move-to-bottom-of-screen'
@@ -35,11 +45,22 @@
   'up': 'vim-mode:move-up'
   'ctrl-n': 'vim-mode:move-down'
   'down': 'vim-mode:move-down'
-
+  
+  'cmd-v': 'core:page-up'
+  'ctrl-v': 'core:page-down'
   'ctrl-d': 'core:delete'
-  'ctrl-w': 'core:cut'
+  # 'ctrl-w': 'core:cut'
 
+  # 'ctrl-k': 'vim-mode:delete-to-last-character-of-line'
+  
+  'ctrl-space': 'vim-mode:activate-characterwise-visual-mode'
+  # 'ctrl-y': 'vim-mode:put-before'
+  'ctrl-y': 'core:paste'
+ 
 
+###########################################################################
+# Command Mode and Visual Mode
+###########################################################################
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
   'ctrl-g': 'core:cancel'
@@ -62,10 +83,11 @@
   'cmd-shift-b': 'vim-mode:move-to-previous-whole-word'
   'cmd-e': 'vim-mode:move-to-next-paragraph'
   'cmd-a': 'vim-mode:move-to-previous-paragraph'
-  # 'ctrl-a': 'vim-mode:move-to-beginning-of-line'
+  'ctrl-a': 'vim-mode:move-to-beginning-of-line'
   '^': 'vim-mode:move-to-first-character-of-line'
   '_': 'vim-mode:move-to-first-character-of-line-and-down'
-  '$': 'vim-mode:move-to-last-character-of-line'
+  # '$': 'vim-mode:move-to-last-character-of-line'
+  'ctrl-e': 'vim-mode:move-to-last-character-of-line'
   '-': 'vim-mode:move-to-first-character-of-line-up'
   '+': 'vim-mode:move-to-first-character-of-line-down'
   'enter': 'vim-mode:move-to-first-character-of-line-down'
@@ -86,7 +108,7 @@
   'z R': 'editor:unfold-all'
   'z c': 'editor:fold-current-row'
   'z o': 'editor:unfold-current-row'
-  'G': 'vim-mode:move-to-line'
+  'ctrl-x ]': 'vim-mode:move-to-line'
   'ctrl-cmd-h': 'vim-mode:move-to-top-of-screen'
   'ctrl-cmd-l': 'vim-mode:move-to-bottom-of-screen'
   'ctrl-cmd-m': 'vim-mode:move-to-middle-of-screen'
@@ -103,37 +125,36 @@
   # '=': 'vim-mode:auto-indent'
   # 'J': 'vim-mode:join'
 
-  # 'cmd-w': 'vim-mode:yank'
+  'cmd-w': 'vim-mode:yank'
   'ctrl-k': 'vim-mode:yank-line'
-  'ctrl-y': 'unset!'
-  # 'p': 'vim-mode:put-after'
+  # 'ctrl-y': 'vim-mode:put-befor'
 
   '~': 'vim-mode:toggle-case'
 
-  'ctrl-w ctrl-h': 'vim-mode:focus-pane-view-on-left'
-  'ctrl-w h': 'vim-mode:focus-pane-view-on-left'
-  'ctrl-w left': 'window:focus-pane-on-left'
-  'ctrl-w ctrl-l': 'vim-mode:focus-pane-view-on-right'
-  'ctrl-w l': 'vim-mode:focus-pane-view-on-right'
-  'ctrl-w right': 'window:focus-pane-on-right'
-  'ctrl-w ctrl-k': 'vim-mode:focus-pane-view-above'
-  'ctrl-w k': 'vim-mode:focus-pane-view-above'
-  'ctrl-w up': 'window:focus-pane-above'
-  'ctrl-w ctrl-j': 'vim-mode:focus-pane-view-below'
-  'ctrl-w j': 'vim-mode:focus-pane-view-below'
-  'ctrl-w down': 'window:focus-pane-below'
+  '# ctrl-w ctrl-h': 'vim-mode:focus-pane-view-on-left'
+  # 'ctrl-w h': 'vim-mode:focus-pane-view-on-left'
+  # 'ctrl-w left': 'window:focus-pane-on-left'
+  # 'ctrl-w ctrl-l': 'vim-mode:focus-pane-view-on-right'
+  # 'ctrl-w l': 'vim-mode:focus-pane-view-on-right'
+  # 'ctrl-w right': 'window:focus-pane-on-right'
+  # 'ctrl-w ctrl-k': 'vim-mode:focus-pane-view-above'
+  # 'ctrl-w k': 'vim-mode:focus-pane-view-above'
+  # 'ctrl-w up': 'window:focus-pane-above'
+  # 'ctrl-w ctrl-j': 'vim-mode:focus-pane-view-below'
+  # 'ctrl-w j': 'vim-mode:focus-pane-view-below'
+  # 'ctrl-w down': 'window:focus-pane-below'
   'ctrl-t': 'window:focus-next-pane'
-  'ctrl-w w': 'window:focus-next-pane'
-  'ctrl-w ctrl-p': 'vim-mode:focus-previous-pane-view'
-  'ctrl-w p': 'window:focus-previous-pane'
-  'ctrl-w ctrl-v': 'pane:split-right'
+  # 'ctrl-w w': 'window:focus-next-pane'
+  # 'ctrl-w ctrl-p': 'vim-mode:focus-previous-pane-view'
+  # 'ctrl-w p': 'window:focus-previous-pane'
+  # 'ctrl-w ctrl-v': 'pane:split-right'
   'ctrl-x 3': 'pane:split-right'
   'ctrl-x 2': 'pane:split-down'
-  'ctrl-w s': 'pane:split-down'
-  'ctrl-w ctrl-c': 'pane:close'
+  # 'ctrl-w s': 'pane:split-down'
+  # 'ctrl-w ctrl-c': 'pane:close'
   'ctrl-x 0': 'pane:close'
   'ctrl-x k': 'core:close'
-  'ctrl-w q': 'core:close'
+  # 'ctrl-w q': 'core:close'
   'g t': 'pane:show-next-item'
   'g T': 'pane:show-previous-item'
 
@@ -167,9 +188,13 @@
   '8': 'vim-mode:repeat-prefix'
   '9': 'vim-mode:repeat-prefix'
 
+###########################################################################
+# Command Mode Only
+###########################################################################
+
 'atom-text-editor.vim-mode.command-mode':
   'i': 'vim-mode:activate-insert-mode'
-  # 'ctrl-space': 'atomic-emacs:set-mark'
+  'ctrl-space': 'vim-mode:activate-characterwise-visual-mode'
   'V': 'vim-mode:activate-linewise-visual-mode'
   'ctrl-x space': 'vim-mode:activate-blockwise-visual-mode'
 
@@ -219,6 +244,9 @@
   '" %': 'vim-mode:register-prefix'
   '" _': 'vim-mode:register-prefix'
 
+###########################################################################
+# Visual Mode Selection 
+###########################################################################
 'atom-text-editor.vim-mode.operator-pending-mode, atom-text-editor.vim-mode.visual-mode':
   'i w': 'vim-mode:select-inside-word'
   'i "': 'vim-mode:select-inside-double-quotes'
@@ -250,7 +278,15 @@
   'a b': 'vim-mode:select-around-parentheses'
   'x': 'vim-mode:reset-command-mode'
 
+###########################################################################
+# Visual Mode after Selection
+###########################################################################
+
 'atom-text-editor.vim-mode.visual-mode':
-  'x': 'vim-mode:delete'
+  # 'ctrl-w': 'vim-mode:delete'
+  'ctrl-w': 'core:cut'
+  # 'cmd-w': 'vim-mode:yank'
+  'cmd-w': 'core:copy'
   's': 'vim-mode:change'
   'o': 'vim-mode:reverse-selections'
+  'ctrl-e': 'vim-mode:move-to-last-character-of-line'

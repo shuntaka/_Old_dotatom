@@ -16,17 +16,18 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
-'atom-text-editor':
-  'cmd-x': 'command-palette:toggle' # emacs M-x
-  'ctrl-x h': 'core:select-all'
-  'ctrl-t': 'unset!'
-  'cmd-a': 'unset!'
+# 'atom-text-editor':
+#   'cmd-x': 'command-palette:toggle' # emacs M-x
+#   'ctrl-x h': 'core:select-all'
+#   'ctrl-t': 'unset!'
+#   'cmd-a': 'unset!'
+  
 'atom-text-editor':
   'cmd-x': 'command-palette:toggle' # emacs M-x
   'ctrl-x h': 'core:select-all'
 
-  'cmd-f': 'editor:move-to-end-of-word' #emacs cmd-f
-  'cmd-b': 'editor:move-to-beginning-of-word' #emacs cmd-f
+  # 'cmd-f': 'editor:move-to-end-of-word' #emacs cmd-f
+  # 'cmd-b': 'editor:move-to-beginning-of-word' #emacs cmd-f
   # 'ctrl-space': 'emacs:set-mark'
 
 'atom-text-editor:not([mini])':
@@ -39,24 +40,24 @@
   'ctrl-d': 'unset!'
   'ctrl-g': 'core:cancel'
   'ctrl-x f': 'application:open';
-  'ctrl-x [': 'core:move-to-top' #emacs C-x [
-  'ctrl-x ]': 'core:move-to-bottom' #emacs C-x ]
-  'cmd-v': 'core:page-up' #emacs cmd-v
-  'ctrl-v': 'core:page-down'
+  # 'ctrl-x [': 'core:move-to-top' #emacs C-x [
+  # 'ctrl-x ]': 'core:move-to-bottom' #emacs C-x ]
+  # 'cmd-v': 'core:page-up' #emacs cmd-v
+  # 'ctrl-v': 'core:page-down'
 
-  'ctrl-x 2': 'pane:split-down'
-  'ctrl-x 3': 'pane:split-right'
-  'ctrl-t': 'window:focus-next-pane'
-  'ctrl-x 0': 'pane:close'
+  # 'ctrl-x 2': 'pane:split-down'
+  # 'ctrl-x 3': 'pane:split-right'
+  # 'ctrl-t': 'window:focus-next-pane'
+  # 'ctrl-x 0': 'pane:close'
 
   'ctrl-/'  : 'core:undo'
   'ctrl-cmd-/': 'core:redo'
 
   'ctrl-x ctrl-s': 'core:save'
 
-  'cmd-a': 'editor:move-to-beginning-of-previous-paragraph'
-  'cmd-e': 'editor:move-to-beginning-of-next-paragraph'
-  'cmd-w': 'unset!'
+  # 'cmd-a': 'editor:move-to-beginning-of-previous-paragraph'
+  # 'cmd-e': 'editor:move-to-beginning-of-next-paragraph'
+  # 'cmd-w': 'unset!'
   # 'cmd-w': 'core:copy'
   # 'ctrl-w': 'core:cut'
 
@@ -65,6 +66,7 @@
   'ctrl-cmd-j': 'line-jumper:move-down'
 
 '.platform-darwin':
+  'ctrl-s': 'find-and-replace:show'
   'ctrl-;': 'fuzzy-finder:toggle-file-finder'
   'ctrl-d': 'core:delete'
   'cmd-g cmd-g': 'go-to-line:toggle'
@@ -72,14 +74,16 @@
 '.platform-darwin .find-and-replace':
   'ctrl-s': 'core:confirm'
   'enter' : 'core:cancel'
+  'ctrl-g': 'vim-mode:activate-command-mode'
+  
   'ctrl-r': 'find-and-replace:show-previous'
   'ctrl-g': 'core:cancel'
   'ctrl-d': 'core:delete'
 
-'.platform-darwin atom-text-editor':
-  'cmd-e': 'unset!'
+# '.platform-darwin atom-text-editor':
+  # 'cmd-e': 'unset!'
 
 '.platform-darwin, .platform-win32, .platform-linux':
-  'ctrl-g': 'unset!'
-  'ctrl-g': 'core:cancel'
+  # 'ctrl-g': 'unset!'
+  # 'ctrl-g': 'core:cancel'
   'cmd-g cmd-g': 'go-to-line:toggle'
